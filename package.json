@@ -1,9 +1,9 @@
 {
   "name": "language-rust",
-  "version": "0.0.0",
-  "private": true,
-  "description": "A short description of your package",
-  "repository": "https://github.com/atom/language-rust",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Rust language grammar for Atom",
+  "repository": "https://github.com/TheHydroImpulse/language-rust",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
