@@ -1,7 +1,7 @@
 '.source.rs':
   'If':
     'prefix': 'if'
-    'body': 'if (${1:true}) {${0:$TM_SELECTED_TEXT}};'
+    'body': 'if ${1:true} {${0:$TM_SELECTED_TEXT}};'
   'fn':
     'prefix': 'fn'
     'body': 'fn ${1:function_name} (${2:argument}) {\n\t${0:// body...}\n}'
