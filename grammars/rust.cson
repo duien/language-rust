@@ -138,12 +138,26 @@
     'name': 'comment.block.rs'
   }
   {
-    'captures':
-      '1':
-        'name': 'punctuation.definition.comment.rs'
-    'match': '(//).*$\\n?'
-    'name': 'comment.line.double-slash.rs'
-  }
+    "begin": "(^[ \\t]+)?(?=//)",
+    "beginCaptures": {
+      "1": {
+        "name": "punctuation.whitespace.comment.leading.rs"
+      }
+    },
+    "end": "(?!\\G)",
+    "patterns": [
+      {
+        "begin": "//",
+        "beginCaptures": {
+          "0": {
+            "name": "punctuation.definition.comment.rs"
+          }
+        },
+        "end": "\\n",
+        "name": "comment.line.double-slash.rs"
+      }
+    ]
+  },
   {
     'match': '\\b(struct|bool|byte|char|class|double|enum|float|f([0-9]+)|fn|int|use|uint|([0-9]+)i|([0-9]+)u|u([0-9]+)|i([0-9]+)|iface|impl|interface|long|type|short|ret|resource|str|var|mod|native|let|void)\\b'
     'name': 'storage.type.rs'
